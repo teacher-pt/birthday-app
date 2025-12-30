@@ -1,0 +1,27 @@
+.greeting-card {
+    border: 1px solid rgba(76, 175, 80, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    background: linear-gradient(180deg, #ffffff 0%, #f3f8f7 100%);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+
+    /* 3D card look */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.08);
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+    transition: transform 280ms cubic-bezier(.25, .8, .25, 1), box-shadow 280ms;
+    will-change: transform, box-shadow;
+
+
+    /* hover/focus lifts the card and intensifies the shadow for a 3D effect */
+    &:hover,
+    &:focus {
+        transform: translateY(-10px) rotateX(2deg);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22), 0 6px 12px rgba(0, 0, 0, 0.12);
+        outline: none;
+    }
+}
