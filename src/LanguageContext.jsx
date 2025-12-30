@@ -1,15 +1,15 @@
 import { createContext, useState } from 'react'
 
 export const LanguageContext = createContext({
-    value: 'en', // en | he | fr
-    setValue: (language) => { },
+    language: 'en', // en | he | fr
+    setLanguage: (language) => { },
 });
 
 export default function LanguageContextProvider({ children }) {
     const [language, setLanguage] = useState('en');
 
     return (
-        <LanguageContext.Provider value={{ value: language, setValue: setLanguage }}>
+        <LanguageContext.Provider value={{ language, setLanguage }}>
             {children}
         </LanguageContext.Provider>
     )
