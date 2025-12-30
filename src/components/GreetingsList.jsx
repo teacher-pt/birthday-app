@@ -1,7 +1,11 @@
-import React from 'react'
+import GreetingCard from "./GreetingCard";
 
-export default function GreetingsList() {
-  return (
-    <div>GreetingsList</div>
-  )
+export default function GreetingsList({ greetings = [] }) {
+    return (
+        <div>
+            {greetings.map((greeting, index) => (
+                <GreetingCard key={index} greeting={greeting} />
+            ))}
+        </div>
+    )
 }
