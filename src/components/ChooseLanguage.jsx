@@ -1,6 +1,7 @@
 import { useContext, useEffect, useId, useState } from 'react'
 import { LanguageContext } from '../LanguageContext';
 import { translate } from '../utils';
+import './ChooseLanguage.css';
 
 export default function ChooseLanguage() {
     const id = useId();
@@ -20,7 +21,7 @@ export default function ChooseLanguage() {
     }, [language]);
 
     return (
-        <form>
+        <form className='choose-language'>
             <label htmlFor={`lang${id}`}>{labelText}: </label>
             <select name="lang" id={`lang${id}`} onChange={ev => setLanguage(ev.target.value)}>
                 {languages.map(lang => (
