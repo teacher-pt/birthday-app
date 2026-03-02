@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { LanguageContext } from '../LanguageContext';
 import { translate } from '../utils';
+import './BirthDate.css';
 
 export default function BirthDate({ birthdate = new Date() }) {
     const { language } = useContext(LanguageContext);
@@ -21,7 +22,7 @@ export default function BirthDate({ birthdate = new Date() }) {
 
 
     return (
-        <div>
+        <div className='birth-date'>
             <h1>{hText}</h1>
             <p>{pText} {birthdate.toLocaleDateString(language)}</p>
         </div>

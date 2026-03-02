@@ -1,0 +1,12 @@
+.birth-date {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: rgb(0, 195, 255);
+
+	p {
+		font-size: 1.25rem;
+		font-weight: 500;
+		color: rgb(0, 150, 200);
+	}
+}
